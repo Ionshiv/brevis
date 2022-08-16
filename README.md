@@ -1,22 +1,10 @@
-# Biologically RElevant VIrtual Staining
+# Specialised Extraction of Image Data featURes
+## SEIDUR - A BREVIS Derivative
 
-In this repository we provide the code base that accompanies the paper:
+This repository contains a project derived from Brevis at https://github.com/aktgpt/brevis. It contains the code developed for this article https://doi.org/10.1371/journal.pone.0258546 writteb ny Håkan Wieslander, Ankit Gupta, Ebba Bergman, Erik Hallström, and Philip J Harrison.
 
-https://doi.org/10.1371/journal.pone.0258546 
+All credit for the original work to the highly skilled developers involved in that paper. 
 
-## Learning to see colours: Biologically relevant virtual staining for adipocyte cell images
-
-#### by Håkan Wieslander, Ankit Gupta, Ebba Bergman, Erik Hallström and Philip J Harrison
-
-<p>
-    <img src="readme_images/overview.png" alt="drawing" style="width:1200px;"/>
-    <center>Proposed method and workflow. Cell cultures are imaged by fluorescence and bright-field imaging. These images are used to train and compare specialized models for generating each stain, based on biologically relevant features. The selected models are then used to virtually stain bright-field images.</center>
-</p>
-
-<p>
-    <img src="readme_images/final_results.png" alt="drawing" style="width:1200px;"/>
-    <center>Comparison of images generated from the bright-field z-stack and the ground truth fluorescence images. (A-C) Generated images for the nuclei, lipid droplets and cytoplasm, with zoomed in regions showing some well reconstructed areas alongside some more problematic locations. (D-F) Ground truth images with corresponding zoomed in regions. (G) Maximum projection of the bright-field z-stack with corresponding zoomed in regions.</center>
-</p>
 
 The content and structure of the repo is given by the following: 
 
