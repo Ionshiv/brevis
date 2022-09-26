@@ -1,4 +1,4 @@
-# Specialised Extraction of Image Data featURes
+# Specialised Extraction of Image Data featuRes
 ## SEIDR - A BREVIS Derivative
 
 This repository contains a project derived from Brevis at https://github.com/aktgpt/brevis. It contains the code developed for this article https://doi.org/10.1371/journal.pone.0258546 written ny Håkan Wieslander, Ankit Gupta, Ebba Bergman, Erik Hallström, and Philip J Harrison.
