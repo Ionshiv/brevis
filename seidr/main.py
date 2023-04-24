@@ -1,8 +1,8 @@
 import json
 import os
 
-import brevis.loss as loss
-import brevis.model as model
+import seidr.loss as loss
+import seidr.model as model
 
 from .data import main as data
 from .test import main as test

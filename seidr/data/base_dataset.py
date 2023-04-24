@@ -8,16 +8,16 @@ import glob
 import albumentations as album
 
 
-stats_20x = pd.read_csv("exp_stats/20x_stats.csv")
-stats_40x = pd.read_csv("exp_stats/40x_stats.csv")
-stats_60x = pd.read_csv("exp_stats/60x_stats.csv")
+# stats_20x = pd.read_csv("exp_stats/20x_stats.csv")
+# stats_40x = pd.read_csv("exp_stats/40x_stats.csv")
+# stats_60x = pd.read_csv("exp_stats/60x_stats.csv")
 
-brighfield_means_20x = np.array(stats_20x.iloc[3:]["mean"])
-fluorecscent_means_20x = np.array(stats_20x.iloc[:3]["mean"])
-brighfield_means_40x = np.array(stats_40x.iloc[3:]["mean"])
-fluorecscent_means_40x = np.array(stats_40x.iloc[:3]["mean"])
-brighfield_means_60x = np.array(stats_60x.iloc[3:]["mean"])
-fluorecscent_means_60x = np.array(stats_60x.iloc[:3]["mean"])
+# brighfield_means_20x = np.array(stats_20x.iloc[3:]["mean"])
+# fluorecscent_means_20x = np.array(stats_20x.iloc[:3]["mean"])
+# brighfield_means_40x = np.array(stats_40x.iloc[3:]["mean"])
+# fluorecscent_means_40x = np.array(stats_40x.iloc[:3]["mean"])
+# brighfield_means_60x = np.array(stats_60x.iloc[3:]["mean"])
+# fluorecscent_means_60x = np.array(stats_60x.iloc[:3]["mean"])
 
 
 class BaseDataset(Dataset):
@@ -144,35 +144,36 @@ class BaseDataset(Dataset):
         return image, target, target_name, preprocess_step, preprocess_stats
 
     def getstats(self, magnification):
-        if magnification == "20x":
-            self.brightfield_means = np.array(stats_20x.iloc[3:]["mean"])
-            self.fluorecscent_means = np.array(stats_20x.iloc[:3]["mean"])
-            self.brightfield_stds = np.array(stats_20x.iloc[3:]["var"])
-            self.fluorecscent_stds = np.array(stats_20x.iloc[:3]["var"])
-            self.brightfield_max = np.array(stats_20x.iloc[3:]["max"])
-            self.fluorecscent_max = np.array(stats_20x.iloc[:3]["max"])
-            self.brightfield_min = np.array(stats_20x.iloc[3:]["min"])
-            self.fluorecscent_min = np.array(stats_20x.iloc[:3]["min"])
+        print('Not yet Implemented')
+        # if magnification == "20x":
+        #     self.brightfield_means = np.array(stats_20x.iloc[3:]["mean"])
+        #     self.fluorecscent_means = np.array(stats_20x.iloc[:3]["mean"])
+        #     self.brightfield_stds = np.array(stats_20x.iloc[3:]["var"])
+        #     self.fluorecscent_stds = np.array(stats_20x.iloc[:3]["var"])
+        #     self.brightfield_max = np.array(stats_20x.iloc[3:]["max"])
+        #     self.fluorecscent_max = np.array(stats_20x.iloc[:3]["max"])
+        #     self.brightfield_min = np.array(stats_20x.iloc[3:]["min"])
+        #     self.fluorecscent_min = np.array(stats_20x.iloc[:3]["min"])
 
-        elif magnification == "40x":
-            self.brightfield_means = np.array(stats_40x.iloc[3:]["mean"])
-            self.fluorecscent_means = np.array(stats_40x.iloc[:3]["mean"])
-            self.brightfield_stds = np.array(stats_40x.iloc[3:]["var"])
-            self.fluorecscent_stds = np.array(stats_40x.iloc[:3]["var"])
-            self.brightfield_max = np.array(stats_40x.iloc[3:]["max"])
-            self.fluorecscent_max = np.array(stats_40x.iloc[:3]["max"])
-            self.brightfield_min = np.array(stats_40x.iloc[3:]["min"])
-            self.fluorecscent_min = np.array(stats_40x.iloc[:3]["min"])
+        # elif magnification == "40x":
+        #     self.brightfield_means = np.array(stats_40x.iloc[3:]["mean"])
+        #     self.fluorecscent_means = np.array(stats_40x.iloc[:3]["mean"])
+        #     self.brightfield_stds = np.array(stats_40x.iloc[3:]["var"])
+        #     self.fluorecscent_stds = np.array(stats_40x.iloc[:3]["var"])
+        #     self.brightfield_max = np.array(stats_40x.iloc[3:]["max"])
+        #     self.fluorecscent_max = np.array(stats_40x.iloc[:3]["max"])
+        #     self.brightfield_min = np.array(stats_40x.iloc[3:]["min"])
+        #     self.fluorecscent_min = np.array(stats_40x.iloc[:3]["min"])
 
-        elif magnification == "60x":
-            self.brightfield_means = np.array(stats_60x.iloc[3:]["mean"])
-            self.fluorecscent_means = np.array(stats_60x.iloc[:3]["mean"])
-            self.brightfield_stds = np.array(stats_60x.iloc[3:]["var"])
-            self.fluorecscent_stds = np.array(stats_60x.iloc[:3]["var"])
-            self.brightfield_max = np.array(stats_60x.iloc[3:]["max"])
-            self.fluorecscent_max = np.array(stats_60x.iloc[:3]["max"])
-            self.brightfield_min = np.array(stats_60x.iloc[3:]["min"])
-            self.fluorecscent_min = np.array(stats_60x.iloc[:3]["min"])
+        # elif magnification == "60x":
+        #     self.brightfield_means = np.array(stats_60x.iloc[3:]["mean"])
+        #     self.fluorecscent_means = np.array(stats_60x.iloc[:3]["mean"])
+        #     self.brightfield_stds = np.array(stats_60x.iloc[3:]["var"])
+        #     self.fluorecscent_stds = np.array(stats_60x.iloc[:3]["var"])
+        #     self.brightfield_max = np.array(stats_60x.iloc[3:]["max"])
+        #     self.fluorecscent_max = np.array(stats_60x.iloc[:3]["max"])
+        #     self.brightfield_min = np.array(stats_60x.iloc[3:]["min"])
+        #     self.fluorecscent_min = np.array(stats_60x.iloc[:3]["min"])
 
 
 def normalize_image(image, min_cutoff=None, max_cutoff=None):

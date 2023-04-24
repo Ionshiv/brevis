@@ -1,5 +1,5 @@
 # import brevis.data as data
-from brevis import data as data
+from seidr import data as data
 from torch.utils.data import DataLoader
 import os
 import torch

@@ -1,4 +1,4 @@
-from brevis import test as test
+from seidr import test as test
 
 
 def run(config, dataloader, models, save_folder):

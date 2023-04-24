@@ -3,8 +3,8 @@ import json
 import os
 import random
 
-import brevis.exploratory_analysis as exp_analysis
-import brevis.main as main
+import seidr.exploratory_analysis as exp_analysis
+import seidr.main as main
 import numpy as np
 import torch
 
